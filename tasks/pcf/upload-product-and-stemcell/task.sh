@@ -52,7 +52,7 @@ if [ -n "$STEMCELL_VERSION" ]; then
         if any(.Dependencies[]; select(.Release.Product.Name | contains("Stemcells for PCF (Windows)"))) then
           "stemcells-windows-server"
         else
-          "stemcells"
+          "stemcells-ubuntu-xenial"
         end
         ' < pivnet-product/metadata.json
     )
