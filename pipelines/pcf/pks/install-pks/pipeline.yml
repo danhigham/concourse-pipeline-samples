@@ -17,7 +17,7 @@ resources:
 - name: pcf-pipelines-utils
   type: git
   source:
-    uri: https://github.com/pivotalservices/concourse-pipeline-samples.git
+    uri: https://github.com/danhigham/concourse-pipeline-samples.git
 - name: product-release
   type: pivnet
   source:
