@@ -36,6 +36,19 @@ main() {
     --password "$OPSMAN_PASSWORD" \
     --skip-ssl-validation -tr \
     apply-changes
+
+  echo "Deleting tile"
+
+  om-linux \
+    --target https://$OPSMAN_DOMAIN_OR_IP_ADDRESS \
+    --client-id "${OPSMAN_CLIENT_ID}" \
+    --client-secret "${OPSMAN_CLIENT_SECRET}" \
+    --username "$OPSMAN_USERNAME" \
+    --password "$OPSMAN_PASSWORD" \
+    --skip-ssl-validation -tr \
+    delete-product \
+    --product-name "$TILE_PRODUCT_NAME" \
+    --product-version "$product_version"
 }
 
 main
